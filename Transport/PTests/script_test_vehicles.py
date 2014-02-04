@@ -14,3 +14,5 @@ if __name__ == '__main__':
     print myCar
     
     print "This is a test to print in branch MySecondBranch"
+    
+    print "This is another test"

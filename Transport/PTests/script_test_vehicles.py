@@ -8,7 +8,7 @@ import PVehicles.Classes as cls
 if __name__ == '__main__':
     
     myVeh = cls.ClVehicle(1, 6076, 360)
-    print myV
+    print myVeh
     
     myCar = cls.Car(0, 234543, 5, 'Daewoo', 4)
     print myCar

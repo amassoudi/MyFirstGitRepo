@@ -6,7 +6,7 @@ Created on 17 janv. 2014
 
 import PUtils.config as cfg
 
-class Vehicle(object):
+class ClVehicle(object):
     '''
     A class representing vehicles
     '''
@@ -37,7 +37,7 @@ class Vehicle(object):
                                                                          self.i_capacity)
         
     
-class Car(Vehicle):
+class Car(ClVehicle):
     '''
     A class representing vehicles
     '''
@@ -53,12 +53,12 @@ class Car(Vehicle):
         @param i_capacity: vehicle capacity
         @type i_capacity: int 
         '''
-        Vehicle.__init__(self, i_type, i_number, i_capacity)
+        ClVehicle.__init__(self, i_type, i_number, i_capacity)
         self.str_model = str_model
         self.i_wheels_nb = i_wheels_nb
         
     def __str__(self, *args, **kwargs):
-        return Vehicle.__str__(self, *args, **kwargs) + "\nThe model is : %s and has %d wheels" % (self.str_model,
+        return ClVehicle.__str__(self, *args, **kwargs) + "\nThe model is : %s and has %d wheels" % (self.str_model,
                                                                                                    self.i_wheels_nb)
         
         

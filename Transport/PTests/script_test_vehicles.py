@@ -13,4 +13,4 @@ if __name__ == '__main__':
     myCar = cls.Car(0, 234543, 5, 'Daewoo', 4)
     print myCar
         
-    print "I am branch MySecondBranchSubBranch"
+    print "I am branch MySecondBranch"

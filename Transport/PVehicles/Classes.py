@@ -12,7 +12,7 @@ class ClVehicle(object):
     '''
 
 
-    def __init__(self, i_type, i_number, i_capacity):
+    def __init__(self, i_type, i_number, i_capacity, b_mix=True):
         '''
         The constructor
         @param i_type: vehicle type (0 for wheels vehicles, 1 for arerian, 2 for sea, 3 for ferries)
@@ -26,15 +26,21 @@ class ClVehicle(object):
         self.i_type = i_type
         self.i_number = i_number
         self.i_capacity = i_capacity
+        self.b_mix = b_mix
         
         
     def getTypeName(self):
         return cfg.dct_veh_types[self.i_type]
     
     def __str__(self, *args, **kwargs):
+        str_mix = ''
+        if self.b_mix:
+            str_mix += ' and supports mixed passengers'
+        else:
+            str_mix+= ' and does not support mixed passengers'
         return 'Vehicle number : %d, of type %s has a capacity of %d' % (self.i_number,
                                                                          self.getTypeName(),
-                                                                         self.i_capacity)
+                                                                         self.i_capacity) + str_mix
         
     
 class Car(ClVehicle):

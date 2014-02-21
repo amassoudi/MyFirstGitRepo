@@ -49,7 +49,7 @@ class Car(ClVehicle):
     '''
 
 
-    def __init__(self, i_type, i_number, i_capacity, str_model, i_wheels_nb):
+    def __init__(self, i_type, i_number, i_capacity, str_model, i_wheels_nb, i_power):
         '''
         The constructor
         @param i_type: vehicle type (0 for wheels vehicles, 1 for arerian, 2 for sea, 3 for ferries)
@@ -62,9 +62,13 @@ class Car(ClVehicle):
         ClVehicle.__init__(self, i_type, i_number, i_capacity)
         self.str_model = str_model
         self.i_wheels_nb = i_wheels_nb
+        self.i_power = i_power
         
     def __str__(self, *args, **kwargs):
-        return ClVehicle.__str__(self, *args, **kwargs) + "\nThe model is : %s and has %d wheels" % (self.str_model,
-                                                                                                   self.i_wheels_nb)
+        return ClVehicle.__str__(self, *args, **kwargs) + '''\n * The model is : %s\n
+                                                                It has %d wheels
+                                                                It has a power of %d''' % (self.str_model,
+                                                                                           self.i_wheels_nb,
+                                                                                           self.i_power)
         
         
